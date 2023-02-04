@@ -44,7 +44,7 @@ const docs = [
   const mediumdocs = () => {
     return (
       <div className="mediumdocsbody" style={{marginTop: "120px"}}>
-        <center>Documents required for small scale business approval.</center>
+        <center>Documents required for medium scale business approval.</center>
         <br />
         <div className="flex flex-col mt-100">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
