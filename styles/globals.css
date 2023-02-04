@@ -37,14 +37,15 @@
 	margin: -20px 0 50px;
 }
 .mainbody{
-	background: #f6f5f7;
+	background-image: url("../public/mainbg.jpg");
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	margin: -20px 0 50px;
+  /* --tw-bg-opacity: 0.3; */
+
 }
 
 .adminloginbody{
@@ -317,6 +318,14 @@ footer a {
 /*---------------------------------------*/
 .signupbody {
   /* background:linear-gradient(to right, #78a7ba 0%, #385D6C 50%, #78a7ba 99%); */
+  background-image: url("../public/mainbg.jpg");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+  background:cover;
   
 }
 
@@ -358,7 +367,7 @@ footer a {
 }
 
 .form-body .label-title {
-  color:#1BBA93;
+  color:#e9cb8b;
   font-size: 17px;
   font-weight: bold;
 }
@@ -436,11 +445,11 @@ input[type="file"] {
 .btn {
    display:inline-block;
    padding:10px 20px;
-   background-color: #1BBA93;
+   background-color: #e9cb8b;
    font-size:17px;
    border:none;
    border-radius:5px;
-   color:#bcf5e7;
+   color:white;
    cursor:pointer;
 }
 
@@ -660,5 +669,5 @@ input[type="file"] {
 .bckgrnd-gradient{
   /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
   /* background: #6CB4EE; */
-  background-image: linear-gradient(to right, #bdc3c7, #96a0a7, #707e89, #4d5d6c, #2c3e50);
+  background-image: linear-gradient(to right, #F4F2F2, #F4ADAD, #FA5A5A, #FA5A5A, #F01818);
 }

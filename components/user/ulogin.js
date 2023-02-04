@@ -76,7 +76,7 @@ const UserLogin = () => {
               type="password"
               placeholder="Password"
             />
-            <button type="submit">Sign Up</button>
+            <button type="submit" >Sign Up</button>
           </form>
         </div>
 
@@ -93,7 +93,7 @@ const UserLogin = () => {
               placeholder="Password"
             />
             <a href="#">Forgot your password?</a>
-            <button type="submit">Log In</button>
+            <button type="submit" className="bg-red-500 text-white-500 hover:bg-red-300 ">Log In</button>
           </form>
         </div>
 
@@ -110,9 +110,9 @@ const UserLogin = () => {
               </button>
             </div>
             <div className="overlay-panel overlay-right">
-              <h1>Hello, Friend!</h1>
-              <p>Enter your personal details and start journey with us</p>
-              <button class="ghost" type="submit" id="signUp" onClick={handleClickSignUp} >
+              <h1>Dont have an Account? </h1>
+              {/* <p>Enter your personal details and start journey with us</p> */}
+              <button className="ghost hover:bg-red-300 hover:text-red-500" type="submit" id="signUp" onClick={handleClickSignUp} >
                 Sign Up
               </button>
             </div>
