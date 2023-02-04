@@ -16,7 +16,17 @@
 	box-sizing: border-box;
 }
 
-body {
+ /* body {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+} */
+.loginbody{
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
@@ -26,7 +36,16 @@ body {
 	height: 100vh;
 	margin: -20px 0 50px;
 }
-
+.mainbody{
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -275,7 +294,7 @@ footer a {
 /*---------------------------------------*/
 .signupbody {
   /* background:linear-gradient(to right, #78a7ba 0%, #385D6C 50%, #78a7ba 99%); */
-  padding-top:100px
+  
 }
 
 .signup-form {
@@ -416,3 +435,7 @@ input[type="file"] {
     color: red;
     cursor: pointer;
   }
+
+
+
+

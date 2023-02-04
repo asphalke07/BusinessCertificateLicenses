@@ -62,7 +62,7 @@ const UserLogin = () => {
   },[]);
 
   return (
-    <div>
+    <div className="loginbody">
       <div className="container" id="container">
         <div className="form-container sign-up-container">
           <form className="loginform" onSubmit={handleClickSignUp}>

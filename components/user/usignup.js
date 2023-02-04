@@ -62,7 +62,7 @@ function Contact() {
       
 
     return (
-        <div className='mt-8 signupbody'>
+        <div className='mt-8 signupbody mainbody'>
             <form className="signup-form" method="post"  onSubmit={(e) => {
       handleSubmit(createUser)(e)
       // you will have to catch those error and handle them
