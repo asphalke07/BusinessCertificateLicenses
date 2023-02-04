@@ -1,52 +1,44 @@
+import { useContext } from "react";
+import { UserContext } from "../../../context/UserContext";
+
 const docs = [
     {
-        id: 1,
-        name: "Aadhar Card",
-      },
-      {
-        id: 2,
-        name: "Residence certificate",
-      },
-      {
-        id: 3,
-        name: "Nationality Certificate",
-      },
-      {
-        id: 4,
-        name: "NOC (No Objection Certificate)",
-      },
-      {
-        id: 5,
-        name: "Company PAN Card",
-      },
-      {
-        id: 6,
-        name: "TIN (Tax Identification Number)",
-      },
-      {
-        id: 7,
-        name: "Certificate of Incorporation",
-      },
-      {
-        id: 8,
-        name: "Non-disclosure Agreement",
-      },
-      {
-        id: 9,
-        name: "Shareholder Agreement",
-      },
-      {
-        id: 10,
-        name: "Founders Agreement",
-      },
+      id: 1,
+      name: "Aadhar Card",
+    },
+    {
+      id: 2,
+      name: "Residence certificate",
+    },
+    {
+      id: 3,
+      name: "Nationality Certificate",
+    },
+    {
+      id: 4,
+      name: "NOC (No Objection Certificate)",
+    },
+    {
+      id: 5,
+      name: "Company PAN Card",
+    },
+    {
+      id: 6,
+      name: "TIN (Tax Identification Number)",
+    },
+    {
+      id: 7,
+      name: "Certificate of Incorporation",
+    },
   ];
-
-  const mediumdocs = () => {
+  const smalldocs = () => {
+    const { indiUser } = useContext(UserContext);
     return (
-      <div className="mediumdocsbody" style={{marginTop: "120px"}}>
-        <center>Documents required for medium scale business approval.</center>
+      <div className="mediumdocsbody">
+        <h1>{indiUser}</h1>
+        <center>Documents required for small scale business approval.</center>
         <br />
-        <div className="flex flex-col mt-100">
+        <div className="flex flex-col">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
               <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -63,7 +55,7 @@ const docs = [
                         scope="col"
                         className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                       >
-                        Upload 
+                        Upload
                       </th>
                     </tr>
                   </thead>
@@ -84,20 +76,20 @@ const docs = [
                             <div class="mb-3 w-96">
                               <input
                                 class="form-control
-      block
-      w-full
-      px-1
-      py-1
-      text-base
-      font-normal
-      text-gray-600
-      bg-white bg-clip-padding
-      border border-solid border-gray-200
-      rounded
-      transition
-      ease-in-out
-      m-0
-      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                 type="file"
                                 id="formFile"
                               />
@@ -116,5 +108,5 @@ const docs = [
     );
   };
   
-  export default mediumdocs;
+  export default smalldocs;
   

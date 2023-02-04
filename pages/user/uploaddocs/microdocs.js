@@ -1,3 +1,5 @@
+import { UserContext } from "../../../context/UserContext";
+import { useContext } from "react";
 const docs = [
   {
     id: 1,
@@ -18,8 +20,10 @@ const docs = [
 ];
 
 const microdocs = () => {
+  const { indiUser } = useContext(UserContext);
   return (
     <div className="mediumdocsbody">
+      <h1>{indiUser}</h1>
       <center>Documents required for micro scale business approval.</center>
       <br />
       <div className="flex flex-col">
@@ -39,7 +43,7 @@ const microdocs = () => {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Status
+                      Upload 
                     </th>
                   </tr>
                 </thead>
@@ -56,12 +60,29 @@ const microdocs = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span
-                          className="px-2 inline-flex text-xs leading-5
-                      font-semibold rounded-full bg-green-100 text-green-800"
-                        >
-                          Active
-                        </span>
+                        <div class="flex justify-center">
+                          <div class="mb-3 w-96">
+                            <input
+                              class="form-control
+    block
+    w-full
+    px-3
+    py-1.5
+    text-base
+    font-normal
+    text-gray-700
+    bg-white bg-clip-padding
+    border border-solid border-gray-300
+    rounded
+    transition
+    ease-in-out
+    m-0
+    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                              type="file"
+                              id="formFile"
+                            />
+                          </div>
+                        </div>
                       </td>
                     </tr>
                   ))}

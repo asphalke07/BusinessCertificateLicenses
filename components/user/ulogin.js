@@ -1,7 +1,8 @@
 "use client";
 
 import { Router, useRouter } from "next/router";
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
 import { useEffect,useState } from "react";
 import {db} from "../../firebase-config";
 import {getDocs,collection} from "@firebase/firestore"
@@ -10,17 +11,19 @@ const UserLogin = () => {
   const router = useRouter();
   
   const [users,setUsers] =useState([]);
-  const [userFoundBool,setUserFoundBool]=useState(false);
+  const { indiUser, setIndiUser } = useContext(UserContext);
 
   const userCollectionRef=collection(db,"registerUser");
 
   const userNotFound=()=>{
+    setIndiUser(null);
     alert("You have entered wrong Email or Password");
     router.push("/user");
   }
-  const userFound=()=>{
+  const userFound=(email)=>{
     alert("Logged in Successfully");
-    router.push("/user/employeeNo");
+    setIndiUser(email)
+    router.push("/user/Btype");
   }
 
 
@@ -30,18 +33,19 @@ const UserLogin = () => {
     event.preventDefault();
     const currentEmail=event.target.email.value;
     const currentPassword=event.target.password.value;
+    var userFound1=false;
     // console.log(currentUserEmail);
     // console.log(event.target.email.value);
     // console.log(event);
 
       users.map((user)=>{
         
-          user.email === currentEmail && user.password === currentPassword ?(setUserFoundBool(true)):(count=count+1)
+          user.businessEmail === currentEmail && user.password === currentPassword ?(userFound1=true):(count=count+1)
         
       })
       
       {
-        userFoundBool===true?(userFound()):(userNotFound())
+        userFound1===true?(userFound(currentEmail)):(userNotFound())
       }
     // router.push("user/signup");
   };
@@ -93,7 +97,7 @@ const UserLogin = () => {
               placeholder="Password"
             />
             <a href="#">Forgot your password?</a>
-            <button type="submit" className="bg-red-500 text-white-500 hover:bg-red-300 ">Log In</button>
+            <button className="text-black"type="submit">Log In</button>
           </form>
         </div>
 
@@ -110,9 +114,9 @@ const UserLogin = () => {
               </button>
             </div>
             <div className="overlay-panel overlay-right">
-              <h1>Dont have an Account? </h1>
-              {/* <p>Enter your personal details and start journey with us</p> */}
-              <button className="ghost hover:bg-red-300 hover:text-red-500" type="submit" id="signUp" onClick={handleClickSignUp} >
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start your Business journey</p>
+              <button class="ghost" type="submit" id="signUp" onClick={handleClickSignUp} >
                 Sign Up
               </button>
             </div>
