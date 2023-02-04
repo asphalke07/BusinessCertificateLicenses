@@ -1,11 +1,22 @@
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 
 function BusinessDist() {
   const [employeeSize,setemployeeSize]=useState(0);
+  const router=useRouter();
   const handleSubmit=(event)=>{
     event.preventDefault();
     const emploize=event.target.employeesize.value;
-     console.log(emploize);
+    emploize < 16 ? 
+      (router.push('/user/signup/uploaddocs/microdocs')
+    ):(
+      emploize>15 && emploize<31 ?(
+        router.push('/user/signup/uploaddocs/smalldocs')
+      ):(
+        router.push('/user/signup/uploaddocs/mediumdocs')
+      )
+    )
+      
   }
   return (
     <div className='mt-8'>
