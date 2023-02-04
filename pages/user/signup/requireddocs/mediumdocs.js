@@ -41,7 +41,7 @@ const docs = [
       },
   ];
   
-  const smalldocs = () => {
+  const mediumdocs = () => {
     return (
       <div className="mediumdocsbody">
         <center>Documents required for medium scale business approval.</center>
@@ -99,4 +99,4 @@ const docs = [
     );
   };
   
-  export default smalldocs;
+  export default mediumdocs;
