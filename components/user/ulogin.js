@@ -8,7 +8,7 @@ const UserLogin = () => {
     router.push("user/signup");
   };
   return (
-    <div>
+    <div className="loginbody">
       <div className="container" id="container">
         <div className="form-container sign-up-container">
           <form className="loginform" action="#">
