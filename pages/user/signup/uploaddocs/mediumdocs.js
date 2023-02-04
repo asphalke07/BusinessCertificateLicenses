@@ -43,10 +43,10 @@ const docs = [
 
   const mediumdocs = () => {
     return (
-      <>
-        <center>Documents required for micro scale business approval.</center>
+      <div className="mediumdocsbody" style={{marginTop: "120px"}}>
+        <center>Documents required for small scale business approval.</center>
         <br />
-        <div className="flex flex-col mt-60">
+        <div className="flex flex-col mt-100">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
               <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -86,13 +86,13 @@ const docs = [
                                 class="form-control
       block
       w-full
-      px-3
-      py-1.5
+      px-1
+      py-1
       text-base
       font-normal
-      text-gray-700
+      text-gray-600
       bg-white bg-clip-padding
-      border border-solid border-gray-300
+      border border-solid border-gray-200
       rounded
       transition
       ease-in-out
@@ -112,7 +112,7 @@ const docs = [
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   };
   

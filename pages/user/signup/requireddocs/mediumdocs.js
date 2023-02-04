@@ -43,7 +43,7 @@ const docs = [
   
   const smalldocs = () => {
     return (
-      <>
+      <div className="mediumdocsbody">
         <center>Documents required for medium scale business approval.</center>
         <br />
         <div className="flex flex-col">
@@ -95,7 +95,7 @@ const docs = [
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   };
   

@@ -19,7 +19,7 @@ const docs = [
 
 const microdocs = () => {
   return (
-    <>
+    <div className="mediumdocsbody">
       <center>Documents required for micro scale business approval.</center>
       <br />
       <div className="flex flex-col">
@@ -88,7 +88,7 @@ const microdocs = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
