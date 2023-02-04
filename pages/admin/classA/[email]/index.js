@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 
 function Email() {
+    const router=useRouter();
   return (
-    <div>Email</div>
+    <div>Email {router.query.email}</div>
   )
 }
 
