@@ -40,7 +40,7 @@ const UserLogin = () => {
 
       users.map((user)=>{
         
-          user.email === currentEmail && user.password === currentPassword ?(userFound1=true):(count=count+1)
+          user.businessEmail === currentEmail && user.password === currentPassword ?(userFound1=true):(count=count+1)
         
       })
       

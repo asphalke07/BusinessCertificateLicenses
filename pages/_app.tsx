@@ -21,7 +21,7 @@ import { UserContext } from "../context/UserContext";
 
 
 const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
-  const [indiUser, setIndiUser] = useState(null);
+  const [indiUser, setIndiUser] = useState("");
   const value = useMemo(() => ({ indiUser, setIndiUser }), [indiUser, setIndiUser]);
   
   return (

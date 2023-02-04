@@ -7,7 +7,8 @@ import PendingApplication from './admindashboard/pendingapplication';
   return (
     <div>
    {/* welcome dude */}
-    <PendingApplication/>
+    {/* <PendingApplication/> */}
+    <Login />
     </div>
   )
 }
