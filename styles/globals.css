@@ -46,6 +46,18 @@
 	height: 100vh;
 	margin: -20px 0 50px;
 }
+
+.adminloginbody{
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    /* margin: 20px 20px 50px; */
+  
+}
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -613,4 +625,10 @@ input[type="file"] {
 .card:focus-within .content > *:not(.title) {
     transition-duration: 0s;
   }
+}
+
+.bckgrnd-gradient{
+  /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+  /* background: #6CB4EE; */
+  background-image: linear-gradient(to right, #bdc3c7, #96a0a7, #707e89, #4d5d6c, #2c3e50);
 }

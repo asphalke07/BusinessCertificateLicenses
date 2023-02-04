@@ -1,4 +1,4 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import React from 'react'
 
 const Pendingpage = () => {
@@ -25,7 +25,7 @@ const Pendingpage = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Pendingpage
+export default Pendingpage;
