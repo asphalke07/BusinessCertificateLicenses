@@ -48,7 +48,8 @@ const UserLogin = () => {
 
   const handleClickSignUp = () => {
     
-    router.reload(window.location.pathname)
+    // router.reload(window.location.pathname)
+    router.push("user/signup");
 };
 
   useEffect(()=>{
@@ -111,7 +112,7 @@ const UserLogin = () => {
             <div className="overlay-panel overlay-right">
               <h1>Hello, Friend!</h1>
               <p>Enter your personal details and start journey with us</p>
-              <button class="ghost" type="submit" id="signUp" >
+              <button class="ghost" type="submit" id="signUp" onClick={handleClickSignUp} >
                 Sign Up
               </button>
             </div>

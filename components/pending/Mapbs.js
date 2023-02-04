@@ -1,17 +1,16 @@
 import React from 'react'
-import {bsdata} from '../../utils/bsdata'
-// import Pendingpage from '../pending/Pendingpage'
-import Pendingpage from '../pending/Pendingpage'
+import {bsdata} from '../../utils/bsdata.js'
+import Pendingpage from '../pending/Pendingpages'
 const Mapbs=() =>{
   
     <div>
-    {/* {
-       bsdata.map((data)=>{
-        console.log("its clicked");
+    <main class="page-content">
+    {
+       bsdata.map((data)=>(
         <Pendingpage bsName={data.bsName} bsDes={data.bsDes} bsUrl={data.bsUrl}/>
-       })
-    } */}
-    <Pendingpage />
+       ))
+    }
+    </main>
     </div>
   
 }
