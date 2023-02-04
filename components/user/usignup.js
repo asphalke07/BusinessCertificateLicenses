@@ -100,7 +100,7 @@ function Contact() {
                             <label><input type="radio" name="btype" value="medium" id="medium" /> Medium</label>
                             <label><input type="radio" name="btype" value="large" id="large" /> Large</label>
                         </div>
-                    </div> */}
+                    </div>
                     <div className="form-group right">
                         <label className="label-title">Address</label>
                         <input type="text" id="address" className="form-input" placeholder="Enter your Business Address" />
@@ -138,11 +138,11 @@ function Contact() {
                             <button type="submit" className="btn">Register</button>
                             <span>*Required</span>
                         </div>
-                    </div>
+                    {/* </div> */}
 
 
 
-                </div>
+                {/* </div> */}
             </form>
 
         </div>
