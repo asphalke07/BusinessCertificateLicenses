@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import { useRouter } from 'next/router';
 // import { db } from "../firebase-config";
 import { db,storage } from "../../firebase-config";
@@ -54,7 +55,7 @@ function Contact() {
             
                 
             alert('You have Successfully Reg. on Business Certificate License Portal');
-            router.push('/');
+            router.push('/user/Btype');
 
     
         };

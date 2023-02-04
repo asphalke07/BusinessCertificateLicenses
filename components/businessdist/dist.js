@@ -8,12 +8,12 @@ function BusinessDist() {
     event.preventDefault();
     const emploize=event.target.employeesize.value;
     emploize < 16 ? 
-      (router.push('/user/signup/uploaddocs/microdocs')
+      (router.push('/user/uploaddocs/microdocs')
     ):(
       emploize>15 && emploize<31 ?(
-        router.push('/user/signup/uploaddocs/smalldocs')
+        router.push('/user/uploaddocs/smalldocs')
       ):(
-        router.push('/user/signup/uploaddocs/mediumdocs')
+        router.push('/user/uploaddocs/mediumdocs')
       )
     )
       
@@ -57,14 +57,16 @@ function BusinessDist() {
           </ul>
         </div>
       </main>
+      
       <div className='content-center flex justify-center items-center mt-8' >
         <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
           <form class="space-y-6" onSubmit={(e)=>handleSubmit(e)}>
-            <h5 class="text-xl font-medium text-gray-900 dark:text-white">Enter Employee size in Company</h5>
+            <h5 class="text-xl font-medium text-gray-900 dark:text-white">Enter Employee details of Company</h5>
             <div>
               <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Employee Size</label>
               <input type="number" name="employeesize" id="employeesize" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="15" required/>
             </div>
+           
             <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
           </form>
         </div>
