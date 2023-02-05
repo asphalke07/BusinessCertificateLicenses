@@ -11,7 +11,7 @@ import Router, { useRouter } from 'next/router';
 function Email() {
   const router=useRouter();
   const [business,setBusiness] =useState([]);
-  const userCollectionRef=collection(db,"business");
+  const userCollectionRef=collection(db,"registerUser");
   useEffect(()=>{
       const getUsers=async()=>{
         const data = await getDocs(userCollectionRef);

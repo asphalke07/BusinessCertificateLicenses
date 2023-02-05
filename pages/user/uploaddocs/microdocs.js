@@ -23,6 +23,7 @@ import { useRouter } from "next/router";
 // ];
 
 const microdocs = () => {
+  const router=useRouter();
   const { indiUser } = useContext(UserContext);
   const [Doc1Upload,setDoc1Upload]=useState(null);
   const [Doc2Upload,setDoc2Upload]=useState(null);
@@ -47,7 +48,12 @@ const microdocs = () => {
     await uploadBytes(imageRef4,Doc4Upload).then(()=>{
     alert("Your Doc4 is Uploaded ");
     });
+<<<<<<< HEAD
     router.push('/user/dashboard')
+=======
+
+    router.push("/user/dashboard")
+>>>>>>> ac01bb7bc44896fa14b3ab604efdcf3bcfb93571
   }
 
 
@@ -205,9 +211,10 @@ const microdocs = () => {
                     {/* ))} */}
                     {/* </form> */}
                   </tbody>
-                  <button type="button" className="text-black" onClick={handleSubmit}>Submit</button>
+                  
                 {/* </form> */}
               </table>
+              <center><button type="button" className="text-black border-gray-500 mb-2 hover:bg-slate-500" onClick={handleSubmit}>Submit</button></center>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const BusinessDist =()=> {
     // console.log(id);
     // console.log(age);
 
-     const userDoc = doc(db,"registerUser",id);
+     const userDoc = doc(db,"regsiterUser",id);
      const newFields = {btype:btype,employee:employee};
      await updateDoc(userDoc,newFields);
 
