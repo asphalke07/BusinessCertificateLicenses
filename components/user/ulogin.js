@@ -114,8 +114,8 @@ const UserLogin = () => {
               </button>
             </div>
             <div className="overlay-panel overlay-right">
-              <h1>Hello, Friend!</h1>
-              <p>Enter your personal details and start your Business journey</p>
+              {/* <h1>Hello, Friend!</h1> */}
+              <p>Dont have an account?</p>
               <button class="ghost" type="submit" id="signUp" onClick={handleClickSignUp} >
                 Sign Up
               </button>

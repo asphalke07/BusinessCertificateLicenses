@@ -207,9 +207,10 @@ const microdocs = () => {
                     {/* ))} */}
                     {/* </form> */}
                   </tbody>
-                  <button type="button" className="text-black" onClick={handleSubmit}>Submit</button>
+                  
                 {/* </form> */}
               </table>
+              <center><button type="button" className="text-black border-gray-500 mb-2 hover:bg-slate-500" onClick={handleSubmit}>Submit</button></center>
             </div>
           </div>
         </div>
