@@ -1,17 +1,57 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState ,useContext} from 'react'
 import NavbarExp from '../../../components/navbar'
-
+import {db} from "../../../firebase-config";
+import {getDocs,collection} from "@firebase/firestore"
+import { UserContext } from "../../../context/UserContext";
 function ApplicationStatus() {
+    const [users,setUsers] =useState([]);
+    const { indiUser} = useContext(UserContext);
+    const userCollectionRef=collection(db,"registerUser");
+    var count=0;
+    const [phase1,setphase1]=useState(-1);
+    const [phase2,setphase2]=useState(-1);
+    var pha1="null";
+    var pha2='null';
+    // const handlePhase=(user)=>{
+    //     // event.preventDefault();
+    //     setphase1(user.phase1status);
+    //     setphase2(user.phase2status);
+    //     console.log(phase1);
+    //     console.log(phase2);
+    // }
+    useEffect(() => {
+        // console.log(indiUser);
+        const getUsers = async () => {
+            const data = await getDocs(userCollectionRef);
+            // console.log(data);
+            setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        }
+        getUsers();
+    }, []);
+    useEffect(() => {
+
+        users.map((user) => {
+
+            user.businessEmail === indiUser ? (pha1=user.phase1status) : (count = count + 1)
+
+        })
+        users.map((user) => {
+
+            user.businessEmail === indiUser ? (setphase2(user.phase2status)) : (count = count + 1)
+
+        })
+        console.log(pha1)
+        console.log(phase2)
+    },[]);
     const [application, setapplication] = useState(-1);
-    const [phase1, setphase1] = useState(1);
-    const [phase2, setphase2] = useState(1);
+
     return (
         <div>
             <NavbarExp />
             {
                 application === -1 ? (
                     <><div className='flex justify-center items-center mt-8'>
-
+                        <h1>{indiUser}</h1>
                         <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                             <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Business Name</h5>
                             <div class="flex items-baseline text-gray-900 dark:text-white">
