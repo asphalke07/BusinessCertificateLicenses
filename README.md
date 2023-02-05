@@ -8,12 +8,24 @@ This is a software for easy access, upload and verification of Business Document
 ## About 
 
 This software for verifying documents and approving licenses can be useful for all types of businesses varying from small retail stores to even large business firms.
-1.A business user can signup with its basic business details.
-2.After specifying the type of business,he can upload reuired documents for license verification.
-3.The admins at their ends will verify the uploaded documents at their respective stages .
-4.In the meanwhile, users can track the status of their verification applications.
-5.After successful verfication at all stages , the license gets approved.
+---
+* A business user can signup with its basic business details.
 
+* After specifying the type of business,he can upload reuired documents for license verification.
+* The admins at their ends will verify the uploaded documents at their respective stages .
+* In the meanwhile, users can track the status of their verification applications.
+* After successful verfication at all stages , the license gets approved.
+
+
+##           Team-Name:  Demons
+
+##           Team Members
+
+* [Akshay Phalke](https://github.com/asphalke07) -    afalke0007@gmail.com
+* [Atharva Tarlekar](https://github.com/atharva162001) - atharvatarlekar162001@gmail.com
+* [Samarth Langote](https://github.com/Sam130103) - samarthlangote333@gmail.com
+* [Yash Chindhe](https://github.com/staryash25) - yashschindhe@gmail.com
+---
 
 ## Running locally in development mode
 
@@ -69,5 +81,5 @@ If you want to have your local `.env` file have variables for local development 
 ----
 
 
-### Project Link
+
 
