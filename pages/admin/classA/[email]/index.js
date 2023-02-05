@@ -2,10 +2,12 @@ import { useRouter } from 'next/router'
 import React,{useState,useEffect} from 'react'
 import {db} from "../../../../firebase-config";
 import {getDocs,collection} from "@firebase/firestore"
+import PendingApplication from '../../admindashboard/pendingapplication';
 
 function Email() {
+  var count=0;
     const router=useRouter();
-    const [business,setBusiness] =useState([]);
+    const [business,setBusiness] = useState([]);
     const userCollectionRef=collection(db,"business");
     useEffect(()=>{
         const getUsers=async()=>{
@@ -17,17 +19,28 @@ function Email() {
         getUsers();
       },[]);
   return (
-    <div>
-        <div>Officer Email {router.query.email}</div>
-        {
-           business.map((busi)=>{
+    <div className='pt-12'>
+    {/* <AdminNavbar /> */}
+    <h1 className="text-xl text-center font-mono">Officer Email : {router.query.email}</h1>
+    <h1 className='text-center text-3xl'>Pending applications</h1>
+    
+    <main class="page-content flex justify-center items-center">
+    { 
+         business.map((busi)=>(
+           busi.phase1status === 1 && busi.phase2status===0?(<PendingpageCard
+            busiName={busi.name}
+            busiAadhar={busi.aadharcard}
+            busiEmployee={busi.employee}
+            />):(count=count+1))
+      
+         
         
-            busi.phase1status === 0 ?(<Pending />):(count=count+1)
-          
-        })
-        }
+          )
+           }
 
-    </div>
+      </main>
+
+  </div>
     
   )
 }

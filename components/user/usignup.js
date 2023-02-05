@@ -35,10 +35,14 @@ function Contact() {
 
             const aadharId = event.target.aadharId.value
             const aadharCard = event.target.aadharCard.value
+            const phase1status=0;
+            const phase2status=0;
+            const employee=0;
+            const btype="null";
          
 
             await addDoc(userCollectionRef, { fname: firstname,lname:lastname,businessEmail:email,aadharId:aadharId,address:address,password:password
-                ,aadharCard:aadharCard });
+                ,aadharCard:aadharCard,phase1status:phase1status,phase2status:phase2status,employee:employee,btype:btype });
             
                     if(imageUpload===null){
                         alert("Please Upload your Aadhar Card ");

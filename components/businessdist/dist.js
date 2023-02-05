@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { UserContext } from '../../context/UserContext';
 
 function BusinessDist() {
+  const {indiUser} = useContext(UserContext);
   const [employeeSize,setemployeeSize]=useState(0);
   const router=useRouter();
   const handleSubmit=(event)=>{
