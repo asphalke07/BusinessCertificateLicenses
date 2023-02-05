@@ -2,6 +2,7 @@ import { UserContext } from "../../../context/UserContext";
 import { useContext,useState } from "react";
 import { storage } from "../../../firebase-config";
 import {ref,uploadBytes} from "firebase/storage";
+import { useRouter } from "next/router";
 // const docs = [
 //   {
 //     id: 1,
@@ -22,6 +23,7 @@ import {ref,uploadBytes} from "firebase/storage";
 // ];
 
 const microdocs = () => {
+  const router=useRouter();
   const { indiUser } = useContext(UserContext);
   const [Doc1Upload,setDoc1Upload]=useState(null);
   const [Doc2Upload,setDoc2Upload]=useState(null);
@@ -46,6 +48,8 @@ const microdocs = () => {
     await uploadBytes(imageRef4,Doc4Upload).then(()=>{
     alert("Your Doc4 is Uploaded ");
     });
+
+    router.push("/user/dashboard")
   }
 
 

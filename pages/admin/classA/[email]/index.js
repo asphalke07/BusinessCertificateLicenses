@@ -3,12 +3,13 @@ import React,{useState,useEffect} from 'react'
 import {db} from "../../../../firebase-config";
 import {getDocs,collection} from "@firebase/firestore"
 import PendingApplication from '../../admindashboard/pendingapplication';
+import PendingpageCard from '../../../../components/admin/pendingCard';
 
 function Email() {
   var count=0;
     const router=useRouter();
     const [business,setBusiness] = useState([]);
-    const userCollectionRef=collection(db,"business");
+    const userCollectionRef=collection(db,"registerUser");
     useEffect(()=>{
         const getUsers=async()=>{
           const data = await getDocs(userCollectionRef);
