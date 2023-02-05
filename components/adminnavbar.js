@@ -75,7 +75,7 @@ export default function AdminNavbar() {
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="sm" className="hidden lg:inline-block" style={{backgroundColor:'black'}}>
-          <span>Buy Now</span>
+          <span>Sign Out</span>
         </Button>
         <IconButton
           variant="text"

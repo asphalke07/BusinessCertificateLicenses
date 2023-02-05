@@ -11,7 +11,7 @@ function ApplicationStatus() {
     const [phase1,setphase1]=useState(-1);
     const [phase2,setphase2]=useState(-1);
     var pha1="null";
-    var pha2='null';
+    var pha2="null";
     // const handlePhase=(user)=>{
     //     // event.preventDefault();
     //     setphase1(user.phase1status);
@@ -32,16 +32,16 @@ function ApplicationStatus() {
 
         users.map((user) => {
 
-            user.businessEmail === indiUser ? (pha1=user.phase1status) : (count = count + 1)
+            user.businessEmail === indiUser ? (pha1=user.businessEmail) : (count = count + 1)
 
         })
         users.map((user) => {
 
-            user.businessEmail === indiUser ? (setphase2(user.phase2status)) : (count = count + 1)
+            user.businessEmail === indiUser ? (pha2=user.phase1status) : (count = count + 1)
 
         })
         console.log(pha1)
-        console.log(phase2)
+        console.log(pha2)
     },[]);
     const [application, setapplication] = useState(-1);
 
