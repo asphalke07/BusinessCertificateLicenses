@@ -21,9 +21,6 @@ This software for verifying documents and approving licenses can be useful for a
 
 ##           Team Members
 
-* [Akshay Phalke](https://github.com/asphalke07) -    afalke0007@gmail.com
-* [Atharva Tarlekar](https://github.com/atharva162001) - atharvatarlekar162001@gmail.com
-* [Samarth Langote](https://github.com/Sam130103) - samarthlangote333@gmail.com
 * [Yash Chindhe](https://github.com/staryash25) - yashschindhe@gmail.com
 ---
 
