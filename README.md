@@ -17,9 +17,6 @@ This software for verifying documents and approving licenses can be useful for a
 * After successful verfication at all stages , the license gets approved.
 
 
-##           Team-Name:  Demons
-
-##           Team Members
 
 * [Yash Chindhe](https://github.com/staryash25) - yashschindhe@gmail.com
 ---
